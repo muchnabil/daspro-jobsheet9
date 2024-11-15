@@ -4,12 +4,17 @@ public class ArrayValue14 {
         Scanner sc = new Scanner(System.in);
         int[] finalscore = new int [10];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < finalscore.length; i++) {
             System.out.print("Enter the final score " + i + " : ");
             finalscore[i] = sc.nextInt();
         }
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Final score " + i + " is " + finalscore[i]);
+        for (int i = 0; i < finalscore.length; i++) {
+            if (finalscore[i] > 70){
+                System.out.println("Student " + i + " Passed!");
+            }
+            if (finalscore[i] < 70) {
+            System.out.println("Student " + i + " Failed!");
+            }
         }
     }
 }
